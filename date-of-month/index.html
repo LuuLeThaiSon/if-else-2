@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Date of month</title>
+</head>
+<body>
+     <input type="number" id="number" placeholder="Input month">
+     <button onclick="date()">Check</button>
+     <p id="text"></p>
+</body>
+</html>
+
+<script>
+     function date() {
+          let number = +document.getElementById("number").value;
+
+          if (number>=1 && number <=12) {
+               if (number==1 || number==3 || number==5 || number==7 || number==8 || number==10 || number==12) {
+                    document.getElementById("text").innerHTML = "31 ngay"
+               } else if (number==2) {
+                    document.getElementById("text").innerHTML = "28 or 29"
+               } else {
+                    document.getElementById("text").innerHTML = "30 ngay"
+               }
+
+          } else {
+               document.getElementById("text").innerHTML = "Nhap lai"
+          }
+     }
+</script>
