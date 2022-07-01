@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+
+     <input type="number" id="number" placeholder="Input month">
+
+     <button onclick="date()">Check</button>
+     <p id="text"></p>
+
+</body>
+</html>
+
+<script>
+
+     function date() {
+
+          let number = +document.getElementById("number").value;
+
+          switch(number) {
+
+               case 1:
+               case 3:
+               case 5:
+               case 7:
+               case 8:
+               case 10:
+               case 12:
+                    document.getElementById("text").innerHTML = "31 days"
+                    break;
+
+               case 4:
+               case 6:
+               case 9:
+               case 11:
+                    document.getElementById("text").innerHTML = "30 days"
+                    break;
+
+               case 2:
+                    document.getElementById("text").innerHTML = "28 or 29 days"
+                    break;
+                    
+               default:
+                    document.getElementById("text").innerHTML = "Nhap lai"
+          }
+     }
+</script>
